@@ -24,14 +24,19 @@ noBtn.addEventListener('touchstart', (e) => {
 });
 
 // Logika Klik Yes: Putar Musik & Pindah Halaman
+// Logika Klik Yes: Putar Musik & Pindah Halaman
 function playAndGo() {
-    // Memastikan musik ter-load dan diputar
+    const music = document.getElementById('myMusic');
+    
+    // Memaksa browser memutar musik saat ada interaksi (klik tombol Yes)
     music.play().then(() => {
+        // Jika musik berhasil diputar, tunggu 0.5 detik baru pindah halaman
         setTimeout(() => {
             window.location.href = "yes.html";
-        }, 300); 
+        }, 500); 
     }).catch(error => {
-        // Jika autoplay diblokir, langsung pindah saja
+        // Jika gagal (karena diblokir browser), tetap pindah halaman
+        console.log("Musik diblokir browser:", error);
         window.location.href = "yes.html";
     });
 }
@@ -48,4 +53,5 @@ function createHeart() {
     document.body.appendChild(heart);
     setTimeout(() => heart.remove(), 5000);
 }
+
 setInterval(createHeart, 300);
