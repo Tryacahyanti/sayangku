@@ -1,0 +1,87 @@
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #7bbde8;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.wrapper {
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.gif {
+    width: 250px;
+    border-radius: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+h2 {
+    color: #0a4174;
+    margin-bottom: 20px;
+}
+
+.btn-group {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button {
+    width: 120px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.yes-btn {
+    background: #001d39;
+    color: white;
+    margin-right: 20px;
+}
+
+.no-btn {
+    background: white;
+    color: #001d39;
+    border: 2px solid #001d39;
+    position: absolute; /* Wajib agar bisa lari-lari */
+}
+
+/* Partikel Hati */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+    z-index: -1;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
