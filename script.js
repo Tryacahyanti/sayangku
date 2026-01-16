@@ -1,11 +1,7 @@
 const noBtn = document.querySelector('.no-btn');
-const music = document.getElementById('myMusic');
 
-// Logika Tombol No Lari-Lari
 function moveButton() {
-    // Memaksa posisi menjadi fixed agar koordinat random bekerja 100%
     noBtn.style.position = 'fixed'; 
-
     const maxX = window.innerWidth - noBtn.offsetWidth;
     const maxY = window.innerHeight - noBtn.offsetHeight;
 
@@ -16,10 +12,9 @@ function moveButton() {
     noBtn.style.top = randomY + 'px';
 }
 
-// Respon mouse dan sentuhan
 noBtn.addEventListener('mouseover', moveButton);
 noBtn.addEventListener('touchstart', (e) => {
-    e.preventDefault(); // Mencegah klik 'tembus' sebelum lari
+    e.preventDefault();
     moveButton();
 });
 
@@ -54,4 +49,5 @@ function createHeart() {
 }
 
 setInterval(createHeart, 300);
+
 
