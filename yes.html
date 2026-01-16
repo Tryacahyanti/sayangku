@@ -1,192 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Level Up! ❤️</title>
-    <style>
-        /* Impor Font dari Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&family=Dancing+Script:wght@700&display=swap');
- 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: linear-gradient(135deg, #bdd8e9 0%, #7bbde8 100%);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            font-family: 'Poppins', sans-serif;
-            overflow-x: hidden;
-            padding: 20px;
-        }
-
-        /* Container Kartu Glassmorphism */
-        .card {
-            background: rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 25px;
-            padding: 40px 30px;
-            width: 100%;
-            max-width: 450px;
-            text-align: center;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            animation: slideUp 1.2s ease-out;
-        }
-
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Box Foto */
-        .image-box {
-            width: 180px;
-            height: 180px;
-            margin: 0 auto 25px;
-            border-radius: 50%;
-            border: 5px solid white;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            animation: pulse 2s infinite ease-in-out;
-        }
-
-        .image-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
-        /* Judul Gradien Berkilau */
-        .title {
-            font-family: 'Dancing Script', cursive;
-            font-size: 3rem;
-            background: linear-gradient(to right, #124c72, #ffffff, #124c72);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shine 3s linear infinite;
-            margin-bottom: 15px;
-        }
-
-        @keyframes shine {
-            to { background-position: 200% center; }
-        }
-
-        /* Area Pesan */
-        .message {
-            background: rgba(255, 255, 255, 0.4);
-            padding: 20px;
-            border-radius: 20px;
-            color: #444;
-            line-height: 1.8;
-            font-size: 14px;
-            margin-bottom: 25px;
-            box-shadow: inset 0 0 10px rgba(255,255,255,0.5);
-        }
-
-        .message p {
-            margin-bottom: 10px;
-        }
-
-        /* Tombol Return Estetik */
-        .return-btn {
-            display: inline-block;
-            text-decoration: none;
-            background: #001d39;
-            color: white;
-            padding: 12px 35px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: 0.3s;
-            box-shadow: 0 5px 15px rgba(77, 204, 233, 0.4);
-        }
-
-        .return-btn:hover {
-            transform: scale(1.1);
-            background: #49769f;
-            box-shadow: 0 8px 20px rgba(77, 210, 233, 0.6);
-        }
-
-        /* Hujan Hati */
-        .heart {
-            position: fixed;
-            bottom: -10px;
-            pointer-events: none;
-            z-index: -1;
-            animation: floatUp linear forwards;
-        }
-
-        @keyframes floatUp {
-            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
-            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
-        }
-    </style>
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <audio id="bgMusic" autoplay loop>
-    <source src="birthdaysong.mp3" type="audio/mpeg">
-</audio>
+    <audio id="hbdMusic" loop>
+        <source src="birthdaysong.mp3" type="audio/mpeg">
+    </audio>
 
-<script>
-    // Memaksa musik putar saat halaman ucapan terbuka
-    window.addEventListener('load', () => {
-        const audio = document.getElementById('bgMusic');
-        audio.play().catch(() => {
-            // Jika autoplay gagal, musik akan jalan saat dia klik mana saja di layar
-            document.body.addEventListener('click', () => {
-                audio.play();
-            }, { once: true });
-        });
-    });
-</script>
-
-    <div class="card">
+    <div class="container">
         <div class="image-box">
             <img src="yes.jpeg" alt="Foto Kenangan">
         </div>
-        
-        <h1 class="title">Happy Birthday!</h1>
-
+        <div class="title">happy birthday</div>
         <div class="message">
-            <p><strong>Hi sayang...!</strong></p>
-            <p>Selamat ulang tahun ya! Cie makin tua aja, tapi tenang, rasa sayang aku ke kamu justru makin nambah setiap harinya.</p>
-            <p>Makasih ya sudah jadi rumah paling nyaman buat aku pulang, sudah jadi orang yang paling sabar, dan selalu ada di setiap hariku.</p>
-            <p>Semoga di usia yang baru ini, semua impianmu satu per satu jadi nyata. Aku akan selalu ada di sini buat dukung kamu. <em>Love you more than anything!</em> ❤️</p>
+            <p>cie makin tua aja hahaha, gimana perasaan kamu dihari ulang tahun kamu ini?</p>
+            <p>mungkin ada keluh kesahnya? tapi gapapa bahagia" yaa di ulang tahunmu</p>
+            <p>sebelum itu ayo make a wish dulu, udah? semoga wish kamu terkabul yaa</p>
+            <p>thank u for being the best person in my life ❤️</p>
         </div>
-
-        <a href="index.html" class="return-btn">Peluk Lagi? 🤗</a>
+        <a href="index.html" class="next-button">Return</a>
     </div>
 
     <script>
-        // Efek Hujan Hati Otomatis
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.classList.add('heart');
-            const icons = ['❤️', '💖', '✨', '☁️', '🌸'];
-            heart.innerHTML = icons[Math.floor(Math.random() * icons.length)];
-            
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.fontSize = Math.random() * 20 + 10 + 'px';
-            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
-            heart.style.opacity = Math.random();
-            
-            document.body.appendChild(heart);
-            setTimeout(() => heart.remove(), 5000);
-        }
-        setInterval(createHeart, 200);
+        // Logika memutar musik di halaman kedua
+        const song = document.getElementById('hbdMusic');
+        const playSong = () => {
+            song.play().catch(e => console.log("Menunggu sentuhan layar"));
+        };
+        
+        window.addEventListener('load', playSong);
+        document.body.addEventListener('click', playSong, { once: true });
+        document.body.addEventListener('touchstart', playSong, { once: true });
     </script>
 </body>
-
 </html>
