@@ -135,16 +135,21 @@
     </style>
 </head>
 <body>
-    <audio autoplay loop id="bgMusic">
+    <audio id="bgMusic" autoplay loop>
     <source src="birthdaysong.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-    // Tambahan script agar musik di halaman yes.html tetap berputar
-    window.addEventListener('click', () => {
+    // Memaksa musik putar saat halaman ucapan terbuka
+    window.addEventListener('load', () => {
         const audio = document.getElementById('bgMusic');
-        audio.play();
-    }, { once: true });
+        audio.play().catch(() => {
+            // Jika autoplay gagal, musik akan jalan saat dia klik mana saja di layar
+            document.body.addEventListener('click', () => {
+                audio.play();
+            }, { once: true });
+        });
+    });
 </script>
 
     <div class="card">
@@ -183,4 +188,5 @@
         setInterval(createHeart, 200);
     </script>
 </body>
+
 </html>
